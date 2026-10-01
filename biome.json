@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": { "includes": ["**", "!dist", "!examples/reference/extension/background.js"] },
+  "formatter": { "indentStyle": "space", "lineWidth": 100 },
+  "javascript": { "formatter": { "quoteStyle": "single" } },
+  "linter": {
+    "rules": { "suspicious": { "noExplicitAny": "off" } }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "@jun-hash/cue",
+  "version": "0.0.0",
+  "description": "Wait for a human to take their turn in a browser tab.",
+  "license": "MIT",
+  "author": "jun-hash",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jun-hash/cue.git"
+  },
+  "keywords": [
+    "browser-agent",
+    "chrome-extension",
+    "human-in-the-loop",
+    "mcp",
+    "handoff"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./chrome": {
+      "types": "./dist/chrome.d.ts",
+      "default": "./dist/chrome.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "test": "bun test test",
+    "typecheck": "tsc",
+    "check": "biome check .",
+    "format": "biome check --write .",
+    "smoke": "bun run build && node test/node-smoke.mjs",
+    "e2e": "bun run examples/reference/e2e.ts",
+    "reference:install": "bun run examples/reference/install.ts",
+    "prepublishOnly": "bun run check && bun run typecheck && bun test && bun run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "@changesets/cli": "^3.0.3",
+    "@types/bun": "^1.4.2",
+    "@types/chrome": "^0.3.4",
+    "typescript": "^7.0.2"
+  },
+  "peerDependencies": {
+    "@types/chrome": "*"
+  },
+  "peerDependenciesMeta": {
+    "@types/chrome": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

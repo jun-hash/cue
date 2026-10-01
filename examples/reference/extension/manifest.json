@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "cue",
+  "version": "0.0.0",
+  "description": "Tells your agent when you are done in a tab.",
+  "permissions": ["tabs", "nativeMessaging"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnq3WuZAoB7lbGyakIugpMr+EL0K4we0Z47CyHlEcbhQyOpxLun9/mq8b4ziOLPdNcRrj3wTm0aHBN7MEA5R1udvV9qYdIPEJTvVICHR7VcWIqyykT/BXdSx2XEmoplC59boK08BWkYZlKYEbZ+mce82NYRvfhfcV3IF5xTVfVyy87E3j/fa/aQEPZQ2/zVKVVqoHCnDTArG7SxTgt9JIN4lfFE2nraW5BkfxsWbCbE0/2EgXMJGIVT4HbHnk2+9paYbzjAs+yZrsT/nzs+fvKQWPYMdSwhne9tMnm2b9+oXNYCeRs9vSK3pEmPlVKDnVj2TDX0wRpyaJTN9N/hDFrQIDAQAB"
+}
